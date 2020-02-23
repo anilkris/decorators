@@ -1,0 +1,17 @@
+<div *ngIf="hero">
+    <div>
+        <mat-label>
+            id:
+        </mat-label>
+        <mat-label>
+            {{hero.id}}
+        </mat-label>
+        
+    </div>
+    <div>
+        <mat-label>
+            name:
+        </mat-label>
+        <input mat-input [(ngModel)]="hero.name" #ctrl="ngModel" />
+    </div>
+</div>

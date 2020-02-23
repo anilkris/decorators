@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="hero-list">
+        <h1> Heroes</h1>
+    <ul class="heroes">
+
+        <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+            <div>
+                <mat-label>
+                    id:
+                </mat-label>
+                {{hero.id}}
+            </div>
+            <div>
+                <mat-label>
+                    name:
+                </mat-label>
+                {{hero.name}}
+            </div>
+        </li>
+    </ul>
+ 
+
+    </div>
+   <div class="hero-details">
+
+    <h2> Hero Details </h2>
+        <div *ngIf="selectedHero">
+            <app-hero-detail [hero]="selectedHero">
+
+            </app-hero-detail>
+        </div>
+    </div>
+
+</div>
